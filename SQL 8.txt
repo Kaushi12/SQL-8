@@ -1,0 +1,16 @@
+1) SELECT column1 , column2 ....
+FROM table_names
+WHERE condition
+
+INTERSECT
+
+SELECT column1 , column2 ....
+FROM table_names
+WHERE condition;
+
+2) SELECT col
+FROM table2 
+WHERE NOT EXISTS 
+    (SELECT * 
+     FROM table1 
+     WHERE table1.col = table2.col)
